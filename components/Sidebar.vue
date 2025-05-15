@@ -20,7 +20,14 @@
           :items="navLinks" 
           :collapsed="isCollapsed"           
           :ui="{
-            linkLeadingIcon: 'text-lg'
+            linkLeadingIcon: isCollapsed ? 'text-2xl flex justify-center' : 'text-lg',
+            wrapper: 'space-y-2',
+            list: {
+              base: 'space-y-2'
+            },
+            link: {
+              base: isCollapsed ? 'flex flex-col items-center justify-center gap-2 p-2' : 'flex items-center gap-2 p-2'
+            }
           }"
         />
       </div>
